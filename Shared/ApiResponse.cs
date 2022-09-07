@@ -13,7 +13,7 @@ namespace DAMWeb.Shared
         protected ApiResponse(bool success, string? errorDescription, object? data) 
         {
             Success = success;
-            ErrorDescription = errorDescription ?? "Errore generico";
+            ErrorDescription = success ? "" : errorDescription ?? "Errore generico";
             Data = data;
         }
 
